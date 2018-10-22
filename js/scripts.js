@@ -1,3 +1,9 @@
+
+
+
+
+
+
 $(document).ready(function() {
   $(".form-group").submit(function(event) {
     event.preventDefault();
@@ -7,8 +13,8 @@ var sum = [answer1, answer2];
 var sum1 = sum[1];
 var sum2 = sum.push("done");
 
-
-  $("#finalAnswer").append("<li>" + sum + "</li>");
-
+  sum.forEach(function(element) {
+    return $("#finalAnswer").append("<li>" + element + "</li>")
+})
   });
 });
